@@ -28,18 +28,33 @@ def get_japanese_emoticon(path, emoticon)
   message 
 end
 
+<<<<<<< HEAD
 def get_english_meaning(path, emoticon)
   # code goes here
   data = load_library(path)
   message = "Sorry, that emoticon was not found"
+=======
+def get_english_meaning(filepath, emoticon)
+  # code goes here
+  data = load_library('./lib/emoticons.yml')
+  message = "Sorry, that emoticon was not found."
+>>>>>>> 1b97ebb5003fdff0f1fd435c6ec60f37a66772d9
   #binding.pry
   data.each do |meaning, emos|
     #binding.pry
     if emos.has_value?(emoticon)
+<<<<<<< HEAD
       message = meaning
     end 
   end
   message 
+=======
+      return meaning
+    end 
+    return message
+  end
+   
+>>>>>>> 1b97ebb5003fdff0f1fd435c6ec60f37a66772d9
   #binding.pry
 end
 
